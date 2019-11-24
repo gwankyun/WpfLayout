@@ -5,60 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLayout"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0">
-            <Button>StackPanel1</Button>
-            <Button>StackPanel2</Button>
-            <Button>StackPanel3</Button>
-            <Button>StackPanel4</Button>
-        </StackPanel>
-        <WrapPanel Grid.Row="0" Grid.Column="2">
-            <Button>WrapPanel1</Button>
-            <Button>WrapPanel2</Button>
-            <Button>WrapPanel3</Button>
-            <Button>WrapPanel4</Button>
-        </WrapPanel>
-        <DockPanel Grid.Row="2" Grid.Column="0">
-            <Button DockPanel.Dock="Top">Top</Button>
-            <Button DockPanel.Dock="Left">Left</Button>
-            <Button DockPanel.Dock="Right">Right</Button>
-            <Button DockPanel.Dock="Bottom">Bottom</Button>
-        </DockPanel>
-        <Grid Grid.Row="2" Grid.Column="2"
-              ShowGridLines="True">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0">1</Button>
-            <Button Grid.Row="0" Grid.Column="1">2</Button>
-            <Button Grid.Row="1" Grid.Column="0">3</Button>
-            <Button Grid.Row="1" Grid.Column="1">4</Button>
-        </Grid>
-        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
+        Title="WpfLayout" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="StackPanel">
+                <StackPanel>
+                    <Button>Button1</Button>
+                    <Button>Button2</Button>
+                    <Button>Button3</Button>
+                    <Button>Button4</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="WrapPanel">
+                <WrapPanel>
+                    <Button>Button1</Button>
+                    <Button>Button2</Button>
+                    <Button>Button3</Button>
+                    <Button>Button4</Button>
+                </WrapPanel>
+            </TabItem>
+            <TabItem Header="DockPanel">
+                <DockPanel>
+                    <Button DockPanel.Dock="Top">Top</Button>
+                    <Button DockPanel.Dock="Left">Left</Button>
+                    <Button DockPanel.Dock="Right">Right</Button>
+                    <Button DockPanel.Dock="Bottom">Bottom</Button>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="GridSplitter">
+                <Grid ShowGridLines="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0">Button1</Button>
+                    <Button Grid.Row="0" Grid.Column="2">Button2</Button>
+                    <Button Grid.Row="2" Grid.Column="0">Button3</Button>
+                    <Button Grid.Row="2" Grid.Column="2">Button4</Button>
+                    <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
                       Width="3"
                       VerticalAlignment="Stretch"
                       HorizontalAlignment="Center"
-                      ShowsPreview="False"></GridSplitter>
-        <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                      ShowsPreview="False">
+                    </GridSplitter>
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                       Height="3"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Stretch"
-                      ShowsPreview="False"></GridSplitter>
+                      ShowsPreview="False">
+                    </GridSplitter>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
